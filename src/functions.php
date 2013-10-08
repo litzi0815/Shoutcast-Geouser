@@ -4,7 +4,7 @@ include('mysql.php');
 
 function getIPs($host,$pw)
 {
-	$raw=file_get_contents('http://'.$host.':8000/admin.cgi?sid=1&pass='.$pw);
+	$raw=file_get_contents('http://'.$host.':8000/admin.cgi?sid=1&pass='.$pw); // Change Port here if needed
 	$ip_list=array();
 	$buffer1=explode('Listener List',$raw);
 	
